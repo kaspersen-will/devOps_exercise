@@ -15,7 +15,8 @@ def calculate_total(
     # Feature A: 10% loyalty discount on carts over $50
     if apply_discount and total > 50:
         total = total * 0.9
-    total = total * 1.08 
+    if apply_tax:
+        total = total * 1.08
     return total
 
 
